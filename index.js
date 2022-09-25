@@ -14,9 +14,6 @@ app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 app.use(express.static('public')) //css
 
-app.get('/', (req,res)=>{
-    res.render('home')
-})
 
 //Inserindo as tarefas
 app.post('/tasks/insert', (req, res)=>{
@@ -29,6 +26,20 @@ app.post('/tasks/insert', (req, res)=>{
         res.redirect('/')
     })
 })
+
+app.get('/', (req,res)=>{
+    //Visualizar as tarefas
+    const sql = `SELECT*FROM tasks`
+    pool.query(sql, function(err, data){
+        if(err){
+            console.log(err)
+        }
+        const task = data;
+        res.render('home', {task})
+    })
+   
+})
+
 
 
 

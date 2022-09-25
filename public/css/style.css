@@ -9,12 +9,22 @@
     justify-content: center;
     align-items: center;
 }   
+.form, .form-historic{
+    width: 450px;
+    margin: 0 auto;
+}
 .form-control{
     display: flex;
     flex-direction: row;
     margin-bottom: .5em;
+    text-align: center;
+    justify-content: center;
 }
 
-.form-historic{
-    background-color: red;
+.form-historic div{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid red;
+    padding: 5px;
+    margin: 5px;
 }

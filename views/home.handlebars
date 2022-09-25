@@ -6,7 +6,12 @@
     </div>
 
     <div class="form-historic">
-        
+    {{#each task}}
+    <div>
+    #{{this.id}}<span>{{this.task}}</span>
+    </div>
+    {{/each}}
+    </div>
     </div>
   
 </form>
