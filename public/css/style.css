@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}   
+.form-control{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5em;
+}
+
+.form-historic{
+    background-color: red;
+}

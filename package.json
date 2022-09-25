@@ -1,0 +1,27 @@
+{
+  "name": "to-do-list-nodejs-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoeyros/to-do-list-nodejs-mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoeyros/to-do-list-nodejs-mysql/issues"
+  },
+  "homepage": "https://github.com/gustavoeyros/to-do-list-nodejs-mysql#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
