@@ -1,18 +1,23 @@
 <div class="container">
-<form action="/tasks/insert" method="POST" class="form">
-    <div class="form-control">
-        <input type="text" name="task" placeholder="Digite sua tarefa">
-          <input type="submit" value="Cadastrar">
-    </div>
+    <form action="/tasks/insert" method="POST" class="form">
+        <div class="form-control">
+            <input type="text" name="task" placeholder="Digite sua tarefa">
+            <input type="submit" value="Cadastrar">
+        </div>
 
-    <div class="form-historic">
-    {{#each task}}
-    <div>
-    #{{this.id}}<span>{{this.task}}</span>
-    </div>
-    {{/each}}
-    </div>
-    </div>
-  
+        <div class="form-historic">
+            {{#each task}}
+            <div class="historic-each">
+                <ul>
+                    <li>{{this.id}}</li>
+                    <li>{{this.task}}</li>
+                    <li><a href="/tasks/edit/{{this.id}}">Editar</a></li>
+                    <li><a href="/tasks/remove/{{this.id}}">Apagar</a></li>
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+</div>
+
 </form>
 </div>
